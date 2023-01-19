@@ -1,0 +1,97 @@
+* {
+  /*Seta isso pra cada div*/
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "Play", sans-serif;
+}
+
+body {
+  background: rgba(0, 0, 0);
+  color: aliceblue;
+}
+
+header {
+  font-size: 1.3rem;
+  position: relative;
+  height: 6em;
+  border-bottom: 7px solid #eee;
+}
+
+/* Buttons */
+
+.btn {
+  border: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: greenyellow;
+}
+
+.again {
+  position: absolute; /*A posição 0 absolute é dentro de onde a class btn.again está, no caso é o inicio do container header*/
+  top: -30px;
+  left: 10px;
+  font-size: 2rem;
+  width: 120px;
+  padding-bottom: 5px;
+}
+
+.check {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 17px;
+  height: 35px;
+  width: 110px;
+  font-size: 1em;
+}
+
+h1 {
+  /*Joga o texto dentro de h1 para o centro horizontal e verticalmente*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.between {
+  position: absolute;
+  top: -30px;
+  right: 10px;
+  margin: 0;
+}
+
+.number {
+  /* display, justify-content e align-items afetam o que está dentro da class number, o conteúdo*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  color: black;
+  font-size: 3.2rem;
+  height: 6rem;
+  width: 6rem;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 100%;
+}
+
+main {
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; /*Organiza lado a lado e com uma mesma distância as "divs" dentro de main, funciona com display: flex*/
+}
+
+.guess {
+  height: 70px;
+  width: 140px;
+  border: 4px solid rgb(255, 255, 255);
+  background: none;
+  font-size: 2em;
+  color: aliceblue;
+  text-align: center;
+}
