@@ -95,3 +95,27 @@ main {
   color: aliceblue;
   text-align: center;
 }
+
+.right {
+  height: 123px;
+  width: 215px;
+  display: grid;
+  /* align-items: center; */
+}
+
+.message {
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.label-score {
+  font-size: 1.2em;
+  align-items: center;
+  align-self: center;
+}
+
+.label-highscore {
+  font-size: 1.2em;
+  align-items: center;
+  align-self: center;
+}
