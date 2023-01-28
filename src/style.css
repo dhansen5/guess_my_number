@@ -8,7 +8,7 @@
 
 body {
   background: rgba(0, 0, 0);
-  color: aliceblue;
+  color: #f0f8ff;
 }
 
 header {
@@ -65,7 +65,6 @@ h1 {
 }
 
 .number {
-  /* display, justify-content e align-items afetam o que está dentro da class number, o conteúdo*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,6 +76,14 @@ h1 {
   margin: 0 auto;
   margin-top: 30px;
   border-radius: 100%;
+  transition: all 2s;
+}
+
+.winner {
+  width: 100%;
+  border-radius: 0%;
+  background-color: #08be08;
+
 }
 
 main {
@@ -98,7 +105,7 @@ main {
 
 .right {
   height: 123px;
-  width: 215px;
+  width: 320px;
   display: grid;
   /* align-items: center; */
 }
