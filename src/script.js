@@ -3,13 +3,13 @@
 let secretNumber = Math.trunc(Math.random()*20) + 1;        // Randomize the secret number between 1 and 20
 let score = 20;                                             // Initial score
 let highscore = 0;                                          // Initial highscore
-let gameEnd = false;                                        // Controls the game to restart
+let gameEnded = false;                                      // Controls the game to restart
 
 // When "Check" button is pressed
 document.querySelector(".check").addEventListener("click", function () {
 
     // Verify if the game has ended
-    if (!gameEnd) {
+    if (!gameEnded) {
     // Gets the input value when "Check" button is pressed
     let guessValue = document.querySelector(".guess").value;
 
@@ -30,7 +30,7 @@ document.querySelector(".check").addEventListener("click", function () {
         score--;
         document.querySelector(".score").textContent = score;
     } 
-    // A win
+    // A win happened
     else if(guessValue == secretNumber){
 
         // Winning animation
@@ -40,7 +40,7 @@ document.querySelector(".check").addEventListener("click", function () {
         // Shows the number and message
         document.querySelector(".number").textContent = secretNumber;
         document.querySelector(".message").textContent = "Congratulations!!!";
-        gameEnd = true;
+        gameEnded = true;
 
         // Verify the highscore and store it
         if(score > highscore){
@@ -57,16 +57,16 @@ document.querySelector(".check").addEventListener("click", function () {
         document.querySelector(".score").textContent = score;
     }
 }   else{
-    // If gameEnd = true and check button has been clicked
+    // If gameEnded = true and check button has been clicked
     document.querySelector(".message").textContent = "Restart with the 'Again' button!";
 }
     
 })
 
-// When the Again button is pressed
+// When the Again button is pressed resets the initial conditions
 
 document.querySelector(".again").addEventListener("click", function () {
-    gameEnd = false;
+    gameEnded = false;
     score = 20;
     document.querySelector(".score").textContent = score;
     secretNumber = Math.trunc(Math.random()*20) + 1;
